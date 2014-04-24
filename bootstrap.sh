@@ -2,4 +2,5 @@
 
 echo "--- Welcome User. ---"
 
-sudo apt-get -y install acl
+sed -i 's/www-data/vagrant/g' /etc/apache2/envvars
+sudo service apache2 restart
